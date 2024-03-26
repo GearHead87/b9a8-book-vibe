@@ -14,11 +14,12 @@ const ShowBook = ({ book }) => {
                 ))}
             </div>
             <div className="space-y-4">
-                <h2 className="text-xl font-semibold tracking-wide">{bookName}</h2>
-                <p className="text-xs font-medium">by : {author}</p>
+                <h2 className="text-xl font-bold tracking-wide">{bookName}</h2>
+                <p className="text-base font-medium">by : {author}</p>
+                <hr className="border border-dashed "></hr>
                 <div className="flex justify-between items-center">
-                    <p>{category}</p>
-                    <p className="flex items-center gap-2">{rating} <IoIosStarOutline /> </p>
+                    <p className="font-medium">{category}</p>
+                    <p className="flex items-center font-medium gap-2">{rating} <IoIosStarOutline /> </p>
                 </div>
             </div>
         </NavLink>

@@ -100,5 +100,73 @@
         ],
         "publisher": "Little, Brown and Company",
         "yearOfPublishing": 1951
+    },
+    {
+        "bookId": 7,
+        "bookName": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.ibb.co/j67WQZr/71-Vjm-Mc-E-r-L-AC-UF894-1000-QL80.jpg",
+        "review": "An epic fantasy masterpiece that transports readers to Middle-earth.",
+        "totalPages": 1178,
+        "rating": 4.9,
+        "category": "Fantasy",
+        "tags": [
+            "Epic",
+            "Adventure",
+            "High Fantasy"
+        ],
+        "publisher": "Allen & Unwin",
+        "yearOfPublishing": 1954
+    },
+    {
+        "bookId": 8,
+        "bookName": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "https://i.ibb.co/cQLwXBz/9781847493699.jpg",
+        "review": "A witty and romantic novel exploring love and societal expectations.",
+        "totalPages": 432,
+        "rating": 4.7,
+        "category": "Classic",
+        "tags": [
+            "Romance",
+            "Social Commentary",
+            "Satire"
+        ],
+        "publisher": "T. Egerton, Whitehall",
+        "yearOfPublishing": 1813
+    },
+    {
+        "bookId": 9,
+        "bookName": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "image": "https://i.ibb.co/hdF8xwV/philsophers-stone-uk-childrens-edition.jpg",
+        "review": "A magical journey introducing readers to the world of Hogwarts.",
+        "totalPages": 309,
+        "rating": 4.8,
+        "category": "Fantasy",
+        "tags": [
+            "Magic",
+            "Adventure",
+            "Young Adult"
+        ],
+        "publisher": "Bloomsbury",
+        "yearOfPublishing": 1997
+    },
+    {
+        "bookId": 10,
+        "bookName": "The Hunger Games",
+        "author": "Suzanne Collins",
+        "image": "https://i.ibb.co/qC6dmq3/53320204.jpg",
+        "review": "A gripping dystopian tale of survival and rebellion.",
+        "totalPages": 374,
+        "rating": 4.5,
+        "category": "Young Adult",
+        "tags": [
+            "Dystopian",
+            "Adventure",
+            "Action"
+        ],
+        "publisher": "Scholastic Press",
+        "yearOfPublishing": 2008
     }
 ]
