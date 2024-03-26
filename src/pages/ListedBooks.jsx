@@ -1,33 +1,60 @@
 
 import { Link, Outlet } from "react-router-dom";
-import { getReadBooks, getWishlistBooks } from "../utils";
-import { createContext, useState } from "react";
+import { getReadBooks, getWishlistBooks, saveBooks } from "../utils";
+import { createContext, useEffect, useState } from "react";
 
 export const ReadBooksContext = createContext([]);
 export const WishlistBooksContext = createContext([]);
 
 const ListedBooks = () => {
-    const [tabIndex, setTabIndex] = useState(0)
+    const [tabIndex, setTabIndex] = useState(0);
     const readBooks = getReadBooks();
     const wishlistBooks = getWishlistBooks();
+    const [displayReadBooks, setDisplayReadBooks] = useState([]);
+    const [displayWishlistBooks, setDisplayWishlistBooks] = useState([]);
 
-    
     const handleSortBy = option => {
-        readBooks.sort((book)=> book.rating);
-        console.log(option);
+        if (option === 1) {
+            const sortedBooks = displayReadBooks.sort((book1, book2) => book1.rating - book2.rating);
+            console.log(sortedBooks);
+            setDisplayReadBooks(sortedBooks);
+            // saveBooks('ReadBooks', sortedBooks);
+        }
+        else if (option === 2) {
+            const sortedBooks = displayReadBooks.sort((book1, book2) => book1.totalPages - book2.totalPages);
+            console.log(sortedBooks);
+            setDisplayReadBooks(sortedBooks);
+            // saveBooks('ReadBooks', sortedBooks);
+        }
+        else if (option === 3) {
+            const sortedBooks = displayReadBooks.sort((book1, book2) => book1.yearOfPublishing - book2.yearOfPublishing);
+            console.log(sortedBooks);
+            setDisplayReadBooks(sortedBooks);
+            // saveBooks('ReadBooks', sortedBooks);
+        }
     }
+    useEffect(() => {
+        setDisplayReadBooks(readBooks);
+        setDisplayWishlistBooks(wishlistBooks);
+    }, [readBooks, wishlistBooks]);
+
+
+
+    // console.log(displayReadBooks);
 
     return (
         <div className="space-y-10">
             <h1 className="bg-[#1313130D] font-bold text-2xl text-center py-8 rounded-lg">Books</h1>
             {/* SortBy */}
             <div className="flex items-center justify-center">
-                <select className="select select-bordered w-full max-w-xs">
-                    <option disabled selected>Sort By</option>
-                    <option onClick={() => handleSortBy(1)} >Rating</option>
-                    <option onClick={() => handleSortBy(2)} >Number of pages</option>
-                    <option onClick={() => handleSortBy(3)} >Publisher year</option>
-                </select>
+                <div className="dropdown dropdown-bottom">
+                    <div tabIndex={0} role="button" className="btn m-1">Sort By</div>
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li onClick={() => handleSortBy(1)}><a>Rating</a></li>
+                        <li onClick={() => handleSortBy(2)}><a>Number of pages</a></li>
+                        <li onClick={() => handleSortBy(3)}><a>Publisher year</a></li>
+                    </ul>
+                </div>
             </div>
 
             {/* NavLink */}
@@ -47,8 +74,8 @@ const ListedBooks = () => {
                     <span>Wishlist Books</span>
                 </Link>
             </div>
-            <ReadBooksContext.Provider value={readBooks}>
-                <WishlistBooksContext.Provider value={wishlistBooks}>
+            <ReadBooksContext.Provider value={displayReadBooks}>
+                <WishlistBooksContext.Provider value={displayWishlistBooks}>
                     <Outlet></Outlet>
                 </WishlistBooksContext.Provider>
             </ReadBooksContext.Provider>

@@ -38,7 +38,7 @@ export const saveWishlistBook = book => {
     if (isReadBookExist) {
         return toast.error('You Already Read This Book!');
     }
-    else if(isWishlistExist){
+    else if (isWishlistExist) {
         return toast.error('You Already Added This Book to Your Wishlist!');
     }
 
@@ -47,10 +47,7 @@ export const saveWishlistBook = book => {
     toast.success('Book Added to the Wishlist Successfully!');
 }
 
+export const saveBooks = (locName, booksArray) => {
+    localStorage.setItem(locName, JSON.stringify(booksArray));
+}
 
-// export const deletebook = id => {
-//     let books = getBooks()
-//     const remaining = books.filter(b => b.id !== id)
-//     localStorage.setItem('books', JSON.stringify(remaining))
-//     toast.success('Blog Removed from Bookmark!')
-// }
