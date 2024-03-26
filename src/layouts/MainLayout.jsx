@@ -3,9 +3,10 @@ import Nav from "../components/Nav";
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className="max-w-7xl mx-auto">
             <Nav></Nav>
             <Outlet></Outlet>
+
             
         </div>
     );
