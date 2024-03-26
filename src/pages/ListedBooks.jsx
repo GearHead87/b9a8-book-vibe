@@ -72,7 +72,7 @@ const ListedBooks = () => {
             </div>
 
             {/* NavLink */}
-            <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden flex-nowrap ">
+            <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden flex-nowrap mx-4">
                 <a onClick={() => currentDisplayBooks(0)} rel="noopener noreferrer"
                     className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-gray-400 ${tabIndex === 0 ? 'border border-b-0' : 'border-b'}`}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
@@ -89,7 +89,7 @@ const ListedBooks = () => {
                     <span>Wishlist Books</span>
                 </a>
             </div>
-            <div className="space-y-5">
+            <div className="space-y-5 mx-4">
                 {currentBooks.map((book, index) => (
                     <Book
                         key={index}

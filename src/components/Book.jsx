@@ -6,13 +6,13 @@ import PropTypes from 'prop-types';
 const Book = ({ book }) => {
     const { bookId, bookName, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
     return (
-        <div className="grid lg:grid-cols-5 border-2 p-4 rounded-2xl">
-            <div>
+        <div className="grid lg:grid-cols-5 border-2 p-4 rounded-2xl mx-auto">
+            <div className="flex flex-col lg:flex-row items-center justify-center rounded-xl bg-[#1313130F]">
                 <img src={image} alt="book image" />
             </div>
-            <div className="lg:col-span-4">
-                <h1 className="font-bold text-2xl">{bookName}</h1>
-                <p className="font-medium text-base my-2">by : {author}</p>
+            <div className="lg:col-span-4 mt-4 lg:mt-0 lg: ml-4">
+                <h1 className="font-bold text-2xl text-center lg:text-left">{bookName}</h1>
+                <p className="font-medium text-base my-2 text-center lg:text-left">by : {author}</p>
                 <div className="flex flex-col lg:flex-row lg:items-center gap-4">
                     <div className="flex flex-col lg:flex-row items-center gap-4">
                         <p className="font-bold sm:text-center">Tag </p>

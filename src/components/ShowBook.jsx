@@ -7,7 +7,7 @@ const ShowBook = ({ book }) => {
     const {bookId, bookName, image, tags, author, category, rating } = book;
 
     return (
-        <NavLink to={`book/${bookId}`} className="max-w-xs p-6 rounded-md shadow-md">
+        <NavLink to={`book/${bookId}`} className="max-w-xs p-6 rounded-md shadow-md mx-auto">
             <img src={image} alt="" className="object-cover object-center w-full rounded-md h-72 bg-gray-500" />
             <div className="mt-6 mb-2 flex flex-row gap-4">
                 {tags.map((tag, index) => (

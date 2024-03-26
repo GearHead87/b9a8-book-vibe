@@ -14,7 +14,7 @@ const BookDetails = () => {
 
     return (
         <div>
-            <section className="mt-5">
+            <section className="my-5">
                 <div className="container grid lg:grid-cols-2">
                     <div className="bg-[#1313130F] rounded-2xl">
                         <img src={image} alt="book image" className="w-full scale-75" />
