@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
 
     const navLink = <>
-        <NavLink to={``} type="button" className={({ isActive }) => isActive ? `px-8 py-3 font-semibold border-2 rounded border-vibe-primary` : `px-8 py-3 font-semibold rounded`}>Home</NavLink>
-        <NavLink to={'ListedBook'} type="button" className={({ isActive }) => isActive ? `px-8 py-3 font-semibold border-2 rounded border-vibe-primary` : `px-8 py-3 font-semibold rounded`}>Listed Books</NavLink>
-        <NavLink to={'PagesToRead'} type="button" className={({ isActive }) => isActive ? `px-8 py-3 font-semibold border-2 rounded border-vibe-primary` : `px-8 py-3 font-semibold rounded`}>Pages to Read</NavLink>
+        <NavLink to={``} type="button" className={({ isActive }) => isActive ? `px-8 py-3 font-semibold border-2 rounded border-vibe-btn-primary text-vibe-btn-primary` : `px-8 py-3 font-semibold rounded`}>Home</NavLink>
+        <NavLink to={'ListedBook'} type="button" className={({ isActive }) => isActive ? `px-8 py-3 font-semibold border-2 rounded border-vibe-btn-primary text-vibe-btn-primary` : `px-8 py-3 font-semibold rounded`}>Listed Books</NavLink>
+        <NavLink to={'PagesToRead'} type="button" className={({ isActive }) => isActive ? `px-8 py-3 font-semibold border-2 rounded border-vibe-btn-primary text-vibe-btn-primary` : `px-8 py-3 font-semibold rounded`}>Pages to Read</NavLink>
 
     </>
 

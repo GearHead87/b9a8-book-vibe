@@ -1,4 +1,3 @@
-
 import { Link, Outlet } from "react-router-dom";
 import { getReadBooks, getWishlistBooks, saveBooks } from "../utils";
 import { createContext, useEffect, useState } from "react";
@@ -15,30 +14,34 @@ const ListedBooks = () => {
 
     const handleSortBy = option => {
         if (option === 1) {
-            const sortedBooks = displayReadBooks.sort((book1, book2) => book1.rating - book2.rating);
-            console.log(sortedBooks);
-            setDisplayReadBooks(sortedBooks);
-            // saveBooks('ReadBooks', sortedBooks);
+            const sortedReadBooks = displayReadBooks.sort((book1, book2) => book2.rating - book1.rating);
+            const sortedWishlistBooks = displayWishlistBooks.sort((book1, book2) => book2.rating - book1.rating);
+            setDisplayReadBooks(sortedReadBooks);
+            setDisplayWishlistBooks(sortedWishlistBooks);
+            saveBooks('ReadBooks', sortedReadBooks);
+            saveBooks('WishlistBooks', sortedWishlistBooks);
         }
         else if (option === 2) {
-            const sortedBooks = displayReadBooks.sort((book1, book2) => book1.totalPages - book2.totalPages);
-            console.log(sortedBooks);
-            setDisplayReadBooks(sortedBooks);
-            // saveBooks('ReadBooks', sortedBooks);
+            const sortedReadBooks = displayReadBooks.sort((book1, book2) => book2.totalPages - book1.totalPages);
+            const sortedWishlistBooks = displayWishlistBooks.sort((book1, book2) => book2.totalPages - book1.totalPages);
+            setDisplayReadBooks(sortedReadBooks);
+            setDisplayWishlistBooks(sortedWishlistBooks);
+            saveBooks('ReadBooks', sortedReadBooks);
+            saveBooks('WishlistBooks', sortedWishlistBooks);
         }
         else if (option === 3) {
-            const sortedBooks = displayReadBooks.sort((book1, book2) => book1.yearOfPublishing - book2.yearOfPublishing);
-            console.log(sortedBooks);
-            setDisplayReadBooks(sortedBooks);
-            // saveBooks('ReadBooks', sortedBooks);
+            const sortedReadBooks = displayReadBooks.sort((book1, book2) => book2.yearOfPublishing - book1.yearOfPublishing);
+            const sortedWishlistBooks = displayWishlistBooks.sort((book1, book2) => book2.yearOfPublishing - book1.yearOfPublishing);
+            setDisplayReadBooks(sortedReadBooks);
+            setDisplayWishlistBooks(sortedWishlistBooks);
+            saveBooks('ReadBooks', sortedReadBooks);
+            saveBooks('WishlistBooks', sortedWishlistBooks);
         }
     }
     useEffect(() => {
         setDisplayReadBooks(readBooks);
         setDisplayWishlistBooks(wishlistBooks);
     }, [readBooks, wishlistBooks]);
-
-
 
     // console.log(displayReadBooks);
 
