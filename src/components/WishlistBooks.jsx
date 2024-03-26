@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { WishlistBooksContext } from "../pages/ListedBooks";
+// import { useContext } from "react";
+// import { WishlistBooksContext } from "../pages/ListedBooks";
 import Book from "./Book";
 
 const WishlistBooks = () => {
-    const wishlistBooks = useContext(WishlistBooksContext);
-    // console.log(wishlistBooks);
+    // const wishlistBooks = useContext(WishlistBooksContext);
     return (
         <div>
             {wishlistBooks.map((book) => (

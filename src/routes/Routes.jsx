@@ -8,6 +8,8 @@ import Error from "../pages/Error.jsx";
 import BookDetails from "../pages/BookDetails.jsx";
 import ReadBooks from "../components/ReadBooks.jsx";
 import WishlistBooks from "../components/WishlistBooks.jsx";
+import Contact from "../pages/Contact.jsx";
+import Faq from "../pages/Faq.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +44,14 @@ export const router = createBrowserRouter([
       {
         path: "PagesToRead",
         element: <PagesToRead></PagesToRead>,
+      },
+      {
+        path: "Contact",
+        element: <Contact></Contact>
+      },
+      {
+        path: "FAQ",
+        element: <Faq></Faq>
       },
     ],
   },

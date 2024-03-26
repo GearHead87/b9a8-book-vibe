@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const ShowBook = ({ book }) => {
 
-    const {bookId, bookName, image, tags, author, category, rating } = book
+    const {bookId, bookName, image, tags, author, category, rating } = book;
 
     return (
         <NavLink to={`book/${bookId}`} className="max-w-xs p-6 rounded-md shadow-md">

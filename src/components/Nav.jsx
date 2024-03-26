@@ -6,6 +6,8 @@ const Nav = () => {
         <NavLink to={``} type="button" className={({ isActive }) => isActive ? `px-8 py-3 font-semibold border-2 rounded border-vibe-btn-primary text-vibe-btn-primary` : `px-8 py-3 font-semibold rounded`}>Home</NavLink>
         <NavLink to={'ListedBook'} type="button" className={({ isActive }) => isActive ? `px-8 py-3 font-semibold border-2 rounded border-vibe-btn-primary text-vibe-btn-primary` : `px-8 py-3 font-semibold rounded`}>Listed Books</NavLink>
         <NavLink to={'PagesToRead'} type="button" className={({ isActive }) => isActive ? `px-8 py-3 font-semibold border-2 rounded border-vibe-btn-primary text-vibe-btn-primary` : `px-8 py-3 font-semibold rounded`}>Pages to Read</NavLink>
+        <NavLink to={'FAQ'} type="button" className={({ isActive }) => isActive ? `px-8 py-3 font-semibold border-2 rounded border-vibe-btn-primary text-vibe-btn-primary` : `px-8 py-3 font-semibold rounded`}>FAQ</NavLink>
+        <NavLink to={'Contact'} type="button" className={({ isActive }) => isActive ? `px-8 py-3 font-semibold border-2 rounded border-vibe-btn-primary text-vibe-btn-primary` : `px-8 py-3 font-semibold rounded`}>Contact Us</NavLink>
 
     </>
 
@@ -20,7 +22,7 @@ const Nav = () => {
                         {navLink}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Book Vide</a>
+                <NavLink to={''} className="btn btn-ghost text-xl">Book Vibe</NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
