@@ -61,8 +61,8 @@ const ListedBooks = () => {
 
             {/* SortBy */}
             <div className="flex items-center justify-center">
-                <div className="dropdown dropdown-bottom">
-                    <div tabIndex={0} role="button" className="btn m-1">Sort By</div>
+                <div className="dropdown dropdown-bottom ">
+                    <div tabIndex={0} role="button" className="btn m-1 bg-vibe-btn-primary text-white font-semibold text-lg">Sort By </div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li onClick={() => handleSortBy(1)}><a>Rating</a></li>
                         <li onClick={() => handleSortBy(2)}><a>Number of pages</a></li>

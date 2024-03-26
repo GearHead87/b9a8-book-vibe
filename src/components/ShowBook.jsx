@@ -1,5 +1,6 @@
 import { IoIosStarOutline } from "react-icons/io";
 import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const ShowBook = ({ book }) => {
 
@@ -24,6 +25,10 @@ const ShowBook = ({ book }) => {
             </div>
         </NavLink>
     );
+};
+
+ShowBook.propTypes = {
+    book: PropTypes.object,
 };
 
 export default ShowBook;

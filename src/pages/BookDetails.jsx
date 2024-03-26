@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 import { saveReadbook, saveWishlistBook } from "../utils";

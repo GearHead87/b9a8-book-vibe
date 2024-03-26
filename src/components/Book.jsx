@@ -1,6 +1,7 @@
 import { CiLocationOn } from "react-icons/ci";
 import { IoPeopleOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Book = ({ book }) => {
     const { bookId, bookName, author, image, totalPages, rating, category, tags, publisher, yearOfPublishing } = book;
@@ -54,6 +55,10 @@ const Book = ({ book }) => {
             </div>
         </div>
     );
+};
+
+Book.propTypes = {
+    book: PropTypes.object,
 };
 
 export default Book;
